@@ -1,0 +1,76 @@
+﻿using MediatR;
+using Microsoft.EntityFrameworkCore;
+using Acceloka.Api.Infrastructure.Data;
+using Acceloka.Api.Features.Entities;
+using Microsoft.IdentityModel.Tokens;
+
+namespace Acceloka.Api.Features.Tickets.GetAvailableTickets;
+public class GetAvailableTicketsHandler : IRequestHandler<GetAvailableTicketsQuery, List<GetAvailableTicketsResponse>>
+{
+    private readonly AppDbContext _DbContext;
+
+    public GetAvailableTicketsHandler(AppDbContext dbContext)
+    {
+        _DbContext = dbContext;
+    }
+
+    public async Task<List<GetAvailableTicketsResponse>> Handle(GetAvailableTicketsQuery request, CancellationToken cancellationToken)
+    {
+        var query = _DbContext.Tickets.AsQueryable();
+
+        // Apply filters
+        if (!string.IsNullOrEmpty(request.CategoryName))
+        {
+            query = query.Where(t => t.CategoryName == request.CategoryName);
+        }
+        if (!string.IsNullOrEmpty(request.TicketCode))
+        {
+            query = query.Where(t => t.TicketCode == request.TicketCode);
+        }
+        if (!string.IsNullOrEmpty(request.TicketName))
+        {
+            query = query.Where(t => t.TicketName.Contains(request.TicketName));
+        }
+        if (request.MaxPrice.HasValue)
+        {
+            query = query.Where(t => t.Price <= request.MaxPrice.Value);
+        }
+        if (request.MinEventDate.HasValue)
+        {
+            query = query.Where(t => t.EventDate >= request.MinEventDate.Value);
+        }
+        if (request.MaxEventDate.HasValue)
+        {
+            query = query.Where(t => t.EventDate <= request.MaxEventDate.Value);
+        }
+
+        // Apply sorting
+        query = ApplySorting(query, request.OrderBy, request.SortDirection);
+
+        var results = await query.Select(t => new GetAvailableTicketsResponse
+        {
+            EventDate = t.EventDate,
+            Quota = t.Quota,
+            TicketCode = t.TicketCode,
+            TicketName = t.TicketName,
+            CategoryName = t.CategoryName,
+            Price = t.Price
+        }).ToListAsync(cancellationToken);
+
+        return results;
+    }
+
+    private IQueryable<Ticket> ApplySorting(IQueryable<Ticket> query, string? orderBy, string? sortDirection)
+    {
+        bool ascending = string.Equals(sortDirection, "asc", StringComparison.OrdinalIgnoreCase);
+        return orderBy?.ToLower() switch
+        {
+            "categoryname" => ascending ? query.OrderBy(t => t.CategoryName) : query.OrderByDescending(t => t.CategoryName),
+            "ticketcode" => ascending ? query.OrderBy(t => t.TicketCode) : query.OrderByDescending(t => t.TicketCode),
+            "ticketname" => ascending ? query.OrderBy(t => t.TicketName) : query.OrderByDescending(t => t.TicketName),
+            "price" => ascending ? query.OrderBy(t => t.Price) : query.OrderByDescending(t => t.Price),
+            "eventdate" => ascending ? query.OrderBy(t => t.EventDate) : query.OrderByDescending(t => t.EventDate),
+            _ => query.OrderBy(t => t.TicketCode), // Default sorting
+        };
+    }
+}
