@@ -42,8 +42,12 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 4,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
             {
               "$type": "Document",
               "DocumentIndex": 3,
@@ -91,7 +95,7 @@
               "RelativeDocumentMoniker": "Acceloka.Api\\Program.cs",
               "ToolTip": "D:\\Accelist\\Acceloka.Exam\\Acceloka.Api\\Program.cs",
               "RelativeToolTip": "Acceloka.Api\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAABIAAAAAAAAAA==",
+              "ViewState": "AgIAAD8AAAAAAAAAAAAAAEkAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-02-10T03:44:10.788Z",
               "EditorCaption": ""

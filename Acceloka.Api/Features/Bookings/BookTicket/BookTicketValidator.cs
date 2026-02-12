@@ -21,7 +21,7 @@ public class BookTicketValidator : AbstractValidator<BookTicketCommand>
     {
         public TicketItemValidator(AppDbContext context)
         {
-            // Rule 1: Code ticket tidak terdaftar 
+            // Rule 1: Code ticket not available 
             RuleFor(x => x.TicketCode)
                 .MustAsync(async (code, cancellation) =>
                 {
@@ -29,7 +29,7 @@ public class BookTicketValidator : AbstractValidator<BookTicketCommand>
                 })
                 .WithMessage(x => $"Ticket code '{x.TicketCode}' is not registered.");
 
-            // Rule 2 & 3: Quota habis or Quantity > Quota 
+            // Rule 2 & 3: Quota run out or Quantity > Quota 
             RuleFor(x => x)
                 .MustAsync(async (item, cancellation) =>
                 {
@@ -47,7 +47,7 @@ public class BookTicketValidator : AbstractValidator<BookTicketCommand>
                     var ticket = await context.Tickets.FindAsync(new object[] { code }, cancellation);
                     if (ticket == null) { return true; }
 
-                    // "Date event tidak boleh <= tanggal booking" (Booking date is Now)
+                    // "Date event must be >= booking date" (Booking date is Now)
                     return ticket.EventDate > DateTime.Now;
                 })
                 .WithMessage(x => $"Event date for '{x.TicketCode}' has already passed.");

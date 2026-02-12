@@ -34,11 +34,7 @@ public class RevokeTicketHandler : IRequestHandler<RevokeTicketCommand, RevokeTi
             _dbContext.BookedTickets.Remove(bookedItem);
         }
 
-        // Update Quota? 
-        // The exam doesn't explicitly say "Return quota to available tickets", 
-        // but typically "Revoke" implies refunding/restocking. 
-        // HOWEVER, Step 70 only says "Update data Bookedtiket". 
-        // Let's stick to the explicit instructions to be safe.
+        // Update Quota?
         //ticketInfo.Quota += request.Quantity;
         await _dbContext.SaveChangesAsync(cancellationToken);
 
