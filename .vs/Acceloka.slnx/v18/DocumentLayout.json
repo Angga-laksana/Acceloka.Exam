@@ -3,20 +3,20 @@
   "WorkspaceRootPath": "D:\\Accelist\\Acceloka.Exam\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{6E66307F-0ACE-A670-3953-62D4138686E2}|Acceloka.Api\\Acceloka.Api.csproj|d:\\accelist\\acceloka.exam\\acceloka.api\\features\\bookings\\bookticket\\bookticketvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6E66307F-0ACE-A670-3953-62D4138686E2}|Acceloka.Api\\Acceloka.Api.csproj|solutionrelative:acceloka.api\\features\\bookings\\bookticket\\bookticketvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6E66307F-0ACE-A670-3953-62D4138686E2}|Acceloka.Api\\Acceloka.Api.csproj|d:\\accelist\\acceloka.exam\\acceloka.api\\features\\tickets\\ticketscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6E66307F-0ACE-A670-3953-62D4138686E2}|Acceloka.Api\\Acceloka.Api.csproj|solutionrelative:acceloka.api\\features\\tickets\\ticketscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6E66307F-0ACE-A670-3953-62D4138686E2}|Acceloka.Api\\Acceloka.Api.csproj|d:\\accelist\\acceloka.exam\\acceloka.api\\features\\bookings\\revoketicket\\revoketickethandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6E66307F-0ACE-A670-3953-62D4138686E2}|Acceloka.Api\\Acceloka.Api.csproj|solutionrelative:acceloka.api\\features\\bookings\\revoketicket\\revoketickethandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6E66307F-0ACE-A670-3953-62D4138686E2}|Acceloka.Api\\Acceloka.Api.csproj|d:\\accelist\\acceloka.exam\\acceloka.api\\features\\tickets\\getavailabletickets\\getavailableticketshandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6E66307F-0ACE-A670-3953-62D4138686E2}|Acceloka.Api\\Acceloka.Api.csproj|solutionrelative:acceloka.api\\features\\tickets\\getavailabletickets\\getavailableticketshandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6E66307F-0ACE-A670-3953-62D4138686E2}|Acceloka.Api\\Acceloka.Api.csproj|d:\\accelist\\acceloka.exam\\acceloka.api\\features\\tickets\\getavailabletickets\\getavailableticketsquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6E66307F-0ACE-A670-3953-62D4138686E2}|Acceloka.Api\\Acceloka.Api.csproj|solutionrelative:acceloka.api\\features\\tickets\\getavailabletickets\\getavailableticketsquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{6E66307F-0ACE-A670-3953-62D4138686E2}|Acceloka.Api\\Acceloka.Api.csproj|d:\\accelist\\acceloka.exam\\acceloka.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6E66307F-0ACE-A670-3953-62D4138686E2}|Acceloka.Api\\Acceloka.Api.csproj|solutionrelative:acceloka.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6E66307F-0ACE-A670-3953-62D4138686E2}|Acceloka.Api\\Acceloka.Api.csproj|d:\\accelist\\acceloka.exam\\acceloka.api\\features\\tickets\\ticketscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6E66307F-0ACE-A670-3953-62D4138686E2}|Acceloka.Api\\Acceloka.Api.csproj|solutionrelative:acceloka.api\\features\\tickets\\ticketscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,49 +26,50 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "BookTicketValidator.cs",
-              "DocumentMoniker": "D:\\Accelist\\Acceloka.Exam\\Acceloka.Api\\Features\\Bookings\\BookTicket\\BookTicketValidator.cs",
-              "RelativeDocumentMoniker": "Acceloka.Api\\Features\\Bookings\\BookTicket\\BookTicketValidator.cs",
-              "ToolTip": "D:\\Accelist\\Acceloka.Exam\\Acceloka.Api\\Features\\Bookings\\BookTicket\\BookTicketValidator.cs",
-              "RelativeToolTip": "Acceloka.Api\\Features\\Bookings\\BookTicket\\BookTicketValidator.cs",
-              "ViewState": "AgIAACYAAAAAAAAAAAAkwC0AAAARAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-12T13:15:39.93Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "RevokeTicketHandler.cs",
-              "DocumentMoniker": "D:\\Accelist\\Acceloka.Exam\\Acceloka.Api\\Features\\Bookings\\RevokeTicket\\RevokeTicketHandler.cs",
-              "RelativeDocumentMoniker": "Acceloka.Api\\Features\\Bookings\\RevokeTicket\\RevokeTicketHandler.cs",
-              "ToolTip": "D:\\Accelist\\Acceloka.Exam\\Acceloka.Api\\Features\\Bookings\\RevokeTicket\\RevokeTicketHandler.cs",
-              "RelativeToolTip": "Acceloka.Api\\Features\\Bookings\\RevokeTicket\\RevokeTicketHandler.cs",
-              "ViewState": "AgIAABsAAAAAAAAAAAAYwCIAAAAJAAAAAAAAAA==",
+              "Title": "GetAvailableTicketsHandler.cs",
+              "DocumentMoniker": "D:\\Accelist\\Acceloka.Exam\\Acceloka.Api\\Features\\Tickets\\GetAvailableTickets\\GetAvailableTicketsHandler.cs",
+              "RelativeDocumentMoniker": "Acceloka.Api\\Features\\Tickets\\GetAvailableTickets\\GetAvailableTicketsHandler.cs",
+              "ToolTip": "D:\\Accelist\\Acceloka.Exam\\Acceloka.Api\\Features\\Tickets\\GetAvailableTickets\\GetAvailableTicketsHandler.cs",
+              "RelativeToolTip": "Acceloka.Api\\Features\\Tickets\\GetAvailableTickets\\GetAvailableTicketsHandler.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-12T13:14:08.734Z",
+              "WhenOpened": "2026-02-13T03:01:23.686Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
+              "Title": "GetAvailableTicketsQuery.cs",
+              "DocumentMoniker": "D:\\Accelist\\Acceloka.Exam\\Acceloka.Api\\Features\\Tickets\\GetAvailableTickets\\GetAvailableTicketsQuery.cs",
+              "RelativeDocumentMoniker": "Acceloka.Api\\Features\\Tickets\\GetAvailableTickets\\GetAvailableTicketsQuery.cs",
+              "ToolTip": "D:\\Accelist\\Acceloka.Exam\\Acceloka.Api\\Features\\Tickets\\GetAvailableTickets\\GetAvailableTicketsQuery.cs",
+              "RelativeToolTip": "Acceloka.Api\\Features\\Tickets\\GetAvailableTickets\\GetAvailableTicketsQuery.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-13T02:59:32.731Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
               "Title": "TicketsController.cs",
               "DocumentMoniker": "D:\\Accelist\\Acceloka.Exam\\Acceloka.Api\\Features\\Tickets\\TicketsController.cs",
               "RelativeDocumentMoniker": "Acceloka.Api\\Features\\Tickets\\TicketsController.cs",
               "ToolTip": "D:\\Accelist\\Acceloka.Exam\\Acceloka.Api\\Features\\Tickets\\TicketsController.cs",
               "RelativeToolTip": "Acceloka.Api\\Features\\Tickets\\TicketsController.cs",
-              "ViewState": "AgIAABIAAAAAAAAAAAA1wC0AAAArAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-11T07:48:10.287Z"
+              "WhenOpened": "2026-02-11T07:48:10.287Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\Accelist\\Acceloka.Exam\\Acceloka.Api\\Program.cs",
               "RelativeDocumentMoniker": "Acceloka.Api\\Program.cs",
@@ -76,8 +77,11 @@
               "RelativeToolTip": "Acceloka.Api\\Program.cs",
               "ViewState": "AgIAAC0AAAAAAAAAAAAAAEkAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-10T03:44:10.788Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-10T03:44:10.788Z"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
             }
           ]
         }

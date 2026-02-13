@@ -1,0 +1,47 @@
+2026-02-13 10:09:31.997 +07:00 [INF] Now listening on: https://localhost:7001
+2026-02-13 10:09:32.035 +07:00 [INF] Now listening on: http://localhost:5144
+2026-02-13 10:09:32.078 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-02-13 10:09:32.080 +07:00 [INF] Hosting environment: Development
+2026-02-13 10:09:32.082 +07:00 [INF] Content root path: D:\Accelist\Acceloka.Exam\Acceloka.Api
+2026-02-13 10:09:35.407 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5144/ - null null
+2026-02-13 10:09:35.790 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5144/ - 404 null null 397.107ms
+2026-02-13 10:09:35.815 +07:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5144/, Response status code: 404
+2026-02-13 10:09:50.741 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5144/scalar/v1 - null null
+2026-02-13 10:09:50.775 +07:00 [INF] Executing endpoint 'HTTP: GET /scalar/{documentName?}'
+2026-02-13 10:09:51.118 +07:00 [INF] Write content with HTTP Response ContentType of text/html
+2026-02-13 10:09:51.170 +07:00 [INF] Executed endpoint 'HTTP: GET /scalar/{documentName?}'
+2026-02-13 10:09:51.179 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5144/scalar/v1 - 200 null text/html 438.2181ms
+2026-02-13 10:09:51.252 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5144/scalar/scalar.js - null null
+2026-02-13 10:09:51.254 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5144/_framework/aspnetcore-browser-refresh.js - null null
+2026-02-13 10:09:51.255 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5144/scalar/scalar.aspnetcore.js - null null
+2026-02-13 10:09:51.265 +07:00 [INF] Executing endpoint 'HTTP: GET /scalar/scalar.js'
+2026-02-13 10:09:51.270 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5144/_framework/aspnetcore-browser-refresh.js - 200 16509 application/javascript; charset=utf-8 16.4559ms
+2026-02-13 10:09:51.273 +07:00 [INF] Executing endpoint 'HTTP: GET /scalar/scalar.aspnetcore.js'
+2026-02-13 10:09:51.326 +07:00 [INF] Sending file with download name ''.
+2026-02-13 10:09:51.326 +07:00 [INF] Sending file with download name ''.
+2026-02-13 10:09:51.336 +07:00 [INF] Executed endpoint 'HTTP: GET /scalar/scalar.aspnetcore.js'
+2026-02-13 10:09:51.339 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5144/scalar/scalar.aspnetcore.js - 200 1111 text/javascript 83.9949ms
+2026-02-13 10:09:51.367 +07:00 [INF] Executed endpoint 'HTTP: GET /scalar/scalar.js'
+2026-02-13 10:09:51.372 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5144/scalar/scalar.js - 200 975847 text/javascript 120.1453ms
+2026-02-13 10:09:51.600 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5144/_vs/browserLink - null null
+2026-02-13 10:09:51.727 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5144/_vs/browserLink - 200 null text/javascript; charset=UTF-8 126.7447ms
+2026-02-13 10:09:51.810 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5144/openapi/v1.json - null null
+2026-02-13 10:09:51.823 +07:00 [INF] Executing endpoint 'HTTP: GET /openapi/{documentName}.json'
+2026-02-13 10:09:51.851 +07:00 [INF] Executed endpoint 'HTTP: GET /openapi/{documentName}.json'
+2026-02-13 10:09:51.856 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5144/openapi/v1.json - 200 null application/json;charset=utf-8 46.2096ms
+2026-02-13 10:10:00.684 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5144/api/v1/get-available-ticket - null null
+2026-02-13 10:10:00.693 +07:00 [INF] Executing endpoint 'Acceloka.Api.Features.Tickets.TicketsController.GetAvailableTickets (Acceloka.Api)'
+2026-02-13 10:10:00.788 +07:00 [INF] Route matched with {action = "GetAvailableTickets", controller = "Tickets"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAvailableTickets(Acceloka.Api.Features.Tickets.GetAvailableTickets.GetAvailableTicketsQuery) on controller Acceloka.Api.Features.Tickets.TicketsController (Acceloka.Api).
+2026-02-13 10:10:00.807 +07:00 [WRN] You do not have a valid license key for the Lucky Penny software MediatR. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2026-02-13 10:10:04.089 +07:00 [INF] Executed DbCommand (61ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT count(*)::int
+FROM "Tickets" AS t
+2026-02-13 10:10:04.415 +07:00 [INF] Executed DbCommand (26ms) [Parameters=[@p1='?' (DbType = Int32), @p='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT t."TicketCode", t."TicketName", t."CategoryName", t."EventDate", t."Price", t."Quota"
+FROM "Tickets" AS t
+ORDER BY t."TicketCode"
+LIMIT @p1 OFFSET @p
+2026-02-13 10:10:04.483 +07:00 [INF] Executing OkObjectResult, writing value of type 'Acceloka.Api.Features.Tickets.GetAvailableTickets.GetAvailableTicketsListResponse'.
+2026-02-13 10:10:04.544 +07:00 [INF] Executed action Acceloka.Api.Features.Tickets.TicketsController.GetAvailableTickets (Acceloka.Api) in 3741.7228ms
+2026-02-13 10:10:04.551 +07:00 [INF] Executed endpoint 'Acceloka.Api.Features.Tickets.TicketsController.GetAvailableTickets (Acceloka.Api)'
+2026-02-13 10:10:04.568 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5144/api/v1/get-available-ticket - 200 null application/json; charset=utf-8 3884.4655ms

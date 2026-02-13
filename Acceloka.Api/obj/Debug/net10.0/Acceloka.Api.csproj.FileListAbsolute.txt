@@ -140,3 +140,4 @@ D:\Accelist\Acceloka.Exam\Acceloka.Api\obj\Debug\net10.0\Acceloka.Api.pdb
 D:\Accelist\Acceloka.Exam\Acceloka.Api\obj\Debug\net10.0\Acceloka.Api.genruntimeconfig.cache
 D:\Accelist\Acceloka.Exam\Acceloka.Api\obj\Debug\net10.0\ref\Acceloka.Api.dll
 D:\Accelist\Acceloka.Exam\Acceloka.Api\obj\Debug\net10.0\staticwebassets.upToDateCheck.txt
+D:\Accelist\Acceloka.Exam\Acceloka.Api\obj\Debug\net10.0\Acceloka.Api.sourcelink.json

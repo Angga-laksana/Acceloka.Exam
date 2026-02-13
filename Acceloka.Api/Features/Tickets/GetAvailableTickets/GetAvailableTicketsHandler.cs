@@ -5,7 +5,7 @@ using Acceloka.Api.Features.Entities;
 using Microsoft.IdentityModel.Tokens;
 
 namespace Acceloka.Api.Features.Tickets.GetAvailableTickets;
-public class GetAvailableTicketsHandler : IRequestHandler<GetAvailableTicketsQuery, List<GetAvailableTicketsResponse>>
+public class GetAvailableTicketsHandler : IRequestHandler<GetAvailableTicketsQuery, GetAvailableTicketsListResponse>
 {
     private readonly AppDbContext _DbContext;
 
@@ -14,10 +14,10 @@ public class GetAvailableTicketsHandler : IRequestHandler<GetAvailableTicketsQue
         _DbContext = dbContext;
     }
 
-    public async Task<List<GetAvailableTicketsResponse>> Handle(GetAvailableTicketsQuery request, CancellationToken cancellationToken)
+    public async Task<GetAvailableTicketsListResponse> Handle(GetAvailableTicketsQuery request, CancellationToken cancellationToken)
     {
         var query = _DbContext.Tickets.AsQueryable();
-
+        
         // Apply filters
         if (!string.IsNullOrEmpty(request.CategoryName))
         {
@@ -44,20 +44,32 @@ public class GetAvailableTicketsHandler : IRequestHandler<GetAvailableTicketsQue
             query = query.Where(t => t.EventDate <= request.MaxEventDate.Value);
         }
 
+        var totalCount = await query.CountAsync(cancellationToken);
+
         // Apply sorting
         query = ApplySorting(query, request.OrderBy, request.SortDirection);
 
-        var results = await query.Select(t => new GetAvailableTicketsResponse
-        {
-            EventDate = t.EventDate,
-            Quota = t.Quota,
-            TicketCode = t.TicketCode,
-            TicketName = t.TicketName,
-            CategoryName = t.CategoryName,
-            Price = t.Price
-        }).ToListAsync(cancellationToken);
+        var pagedData = await query
+            .Skip((request.Page - 1) * request.PageSize)
+            .Take(request.PageSize)
+            .Select(t => new GetAvailableTicketsResponse
+            {
+                // ... map your properties ...
+                TicketCode = t.TicketCode,
+                TicketName = t.TicketName,
+                CategoryName = t.CategoryName,
+                EventDate = t.EventDate,
+                Price = t.Price,
+                Quota = t.Quota
+            })
+            .ToListAsync(cancellationToken);
 
-        return results;
+        // 3. Return the Wrapper
+        return new GetAvailableTicketsListResponse
+        {
+            Tickets = pagedData,
+            TotalTickets = totalCount
+        };
     }
 
     private IQueryable<Ticket> ApplySorting(IQueryable<Ticket> query, string? orderBy, string? sortDirection)
