@@ -41,6 +41,18 @@ builder.Services.AddMediatR(cfg =>
 builder.Services.AddValidatorsFromAssembly(Assembly.GetExecutingAssembly());
 // --------------------------------
 
+
+// Cors to allow Next.js frontend to access this API
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowNextJs", policy =>
+    {
+        policy.WithOrigins("http://localhost:3000") // Adjust this to your Next.js app's URL
+              .AllowAnyHeader()
+              .AllowAnyMethod();
+    });
+});
+
 var app = builder.Build();
 
 // Global Error Handling (RFC 7807)
@@ -75,6 +87,7 @@ if (app.Environment.IsDevelopment())
     app.MapScalarApiReference(); // For Api UI
 }
 
+app.UseCors("AllowNextJs");
 app.UseAuthorization();
 app.MapControllers();
 

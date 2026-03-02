@@ -1,0 +1,66 @@
+2026-02-25 10:59:08.769 +07:00 [INF] Now listening on: https://localhost:7001
+2026-02-25 10:59:08.857 +07:00 [INF] Now listening on: http://localhost:5144
+2026-02-25 10:59:08.978 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-02-25 10:59:08.984 +07:00 [INF] Hosting environment: Development
+2026-02-25 10:59:08.989 +07:00 [INF] Content root path: D:\Accelist\Acceloka.Exam\Acceloka.Api
+2026-02-25 10:59:20.735 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5144/ - null null
+2026-02-25 10:59:21.155 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5144/ - 404 null null 433.191ms
+2026-02-25 10:59:21.190 +07:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5144/, Response status code: 404
+2026-02-25 10:59:29.770 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5144/scalar/v1 - null null
+2026-02-25 10:59:29.813 +07:00 [INF] Executing endpoint 'HTTP: GET /scalar/{documentName?}'
+2026-02-25 10:59:30.122 +07:00 [INF] Write content with HTTP Response ContentType of text/html
+2026-02-25 10:59:30.182 +07:00 [INF] Executed endpoint 'HTTP: GET /scalar/{documentName?}'
+2026-02-25 10:59:30.191 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5144/scalar/v1 - 200 null text/html 420.8717ms
+2026-02-25 10:59:30.240 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5144/scalar/scalar.js - null null
+2026-02-25 10:59:30.245 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5144/scalar/scalar.aspnetcore.js - null null
+2026-02-25 10:59:30.253 +07:00 [INF] Executing endpoint 'HTTP: GET /scalar/scalar.js'
+2026-02-25 10:59:30.263 +07:00 [INF] CORS policy execution failed.
+2026-02-25 10:59:30.273 +07:00 [INF] Request origin http://localhost:5144 does not have permission to access the resource.
+2026-02-25 10:59:30.277 +07:00 [INF] Executing endpoint 'HTTP: GET /scalar/scalar.aspnetcore.js'
+2026-02-25 10:59:30.279 +07:00 [INF] Sending file with download name ''.
+2026-02-25 10:59:30.282 +07:00 [INF] Sending file with download name ''.
+2026-02-25 10:59:30.291 +07:00 [INF] Executed endpoint 'HTTP: GET /scalar/scalar.aspnetcore.js'
+2026-02-25 10:59:30.294 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5144/scalar/scalar.aspnetcore.js - 200 1111 text/javascript 48.7585ms
+2026-02-25 10:59:30.319 +07:00 [INF] Executed endpoint 'HTTP: GET /scalar/scalar.js'
+2026-02-25 10:59:30.326 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5144/scalar/scalar.js - 200 975847 text/javascript 86.196ms
+2026-02-25 10:59:30.778 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5144/_framework/aspnetcore-browser-refresh.js - null null
+2026-02-25 10:59:30.778 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5144/_vs/browserLink - null null
+2026-02-25 10:59:30.789 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5144/_framework/aspnetcore-browser-refresh.js - 200 16509 application/javascript; charset=utf-8 11.1422ms
+2026-02-25 10:59:30.839 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5144/openapi/v1.json - null null
+2026-02-25 10:59:30.852 +07:00 [INF] Executing endpoint 'HTTP: GET /openapi/{documentName}.json'
+2026-02-25 10:59:30.882 +07:00 [INF] Executed endpoint 'HTTP: GET /openapi/{documentName}.json'
+2026-02-25 10:59:30.886 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5144/openapi/v1.json - 200 null application/json;charset=utf-8 47.0237ms
+2026-02-25 10:59:30.889 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5144/_vs/browserLink - 200 null text/javascript; charset=UTF-8 112.1085ms
+2026-02-25 10:59:31.447 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5144/scalar/favicon.svg - null null
+2026-02-25 10:59:31.457 +07:00 [INF] Executing endpoint 'HTTP: GET /scalar/favicon.svg'
+2026-02-25 10:59:31.461 +07:00 [INF] Sending file with download name ''.
+2026-02-25 10:59:31.464 +07:00 [INF] Executed endpoint 'HTTP: GET /scalar/favicon.svg'
+2026-02-25 10:59:31.467 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5144/scalar/favicon.svg - 200 533 image/svg+xml 19.6377ms
+2026-02-25 10:59:53.711 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5144/api/v1 - null null
+2026-02-25 10:59:53.721 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5144/api/v1 - 404 null null 9.322ms
+2026-02-25 10:59:53.726 +07:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5144/api/v1, Response status code: 404
+2026-02-25 10:59:59.717 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5144/scalar/v1 - null null
+2026-02-25 10:59:59.728 +07:00 [INF] Executing endpoint 'HTTP: GET /scalar/{documentName?}'
+2026-02-25 10:59:59.733 +07:00 [INF] Write content with HTTP Response ContentType of text/html
+2026-02-25 10:59:59.737 +07:00 [INF] Executed endpoint 'HTTP: GET /scalar/{documentName?}'
+2026-02-25 10:59:59.742 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5144/scalar/v1 - 200 null text/html 24.8366ms
+2026-02-25 10:59:59.810 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5144/scalar/scalar.js - null null
+2026-02-25 10:59:59.818 +07:00 [INF] Executing endpoint 'HTTP: GET /scalar/scalar.js'
+2026-02-25 10:59:59.821 +07:00 [INF] Sending file with download name ''.
+2026-02-25 10:59:59.821 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5144/scalar/scalar.aspnetcore.js - null null
+2026-02-25 10:59:59.824 +07:00 [INF] Executed endpoint 'HTTP: GET /scalar/scalar.js'
+2026-02-25 10:59:59.826 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5144/_framework/aspnetcore-browser-refresh.js - null null
+2026-02-25 10:59:59.835 +07:00 [INF] CORS policy execution failed.
+2026-02-25 10:59:59.837 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5144/scalar/scalar.js - 304 null null 27.0256ms
+2026-02-25 10:59:59.844 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5144/_framework/aspnetcore-browser-refresh.js - 200 16509 application/javascript; charset=utf-8 18.8314ms
+2026-02-25 10:59:59.845 +07:00 [INF] Request origin http://localhost:5144 does not have permission to access the resource.
+2026-02-25 10:59:59.861 +07:00 [INF] Executing endpoint 'HTTP: GET /scalar/scalar.aspnetcore.js'
+2026-02-25 10:59:59.863 +07:00 [INF] Sending file with download name ''.
+2026-02-25 10:59:59.865 +07:00 [INF] Executed endpoint 'HTTP: GET /scalar/scalar.aspnetcore.js'
+2026-02-25 10:59:59.868 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5144/scalar/scalar.aspnetcore.js - 304 null null 46.8241ms
+2026-02-25 11:00:00.205 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5144/_vs/browserLink - null null
+2026-02-25 11:00:00.219 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5144/_vs/browserLink - 200 null text/javascript; charset=UTF-8 13.8459ms
+2026-02-25 11:00:00.455 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5144/openapi/v1.json - null null
+2026-02-25 11:00:00.465 +07:00 [INF] Executing endpoint 'HTTP: GET /openapi/{documentName}.json'
+2026-02-25 11:00:00.480 +07:00 [INF] Executed endpoint 'HTTP: GET /openapi/{documentName}.json'
+2026-02-25 11:00:00.482 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5144/openapi/v1.json - 200 null application/json;charset=utf-8 26.7889ms

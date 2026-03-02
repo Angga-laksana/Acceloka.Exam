@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Acceloka.Api")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+648a9fd78cb68149e4cba7d45dc688917f8f8205")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ae408a1dfb9e41086611785eca9787c114480f87")]
 [assembly: System.Reflection.AssemblyProductAttribute("Acceloka.Api")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Acceloka.Api")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

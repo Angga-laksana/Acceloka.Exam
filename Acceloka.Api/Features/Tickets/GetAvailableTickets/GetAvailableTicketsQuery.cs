@@ -3,6 +3,7 @@
 namespace Acceloka.Api.Features.Tickets.GetAvailableTickets;
 public class GetAvailableTicketsQuery : IRequest<GetAvailableTicketsListResponse>
 {
+    public string? Search { get; set; } = string.Empty;
     public string? CategoryName { get; set; }
     public string? TicketCode { get; set; }
     public string? TicketName { get; set; }

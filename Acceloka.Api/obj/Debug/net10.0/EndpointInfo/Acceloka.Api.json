@@ -20,6 +20,13 @@
         ],
         "parameters": [
           {
+            "name": "Search",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
             "name": "CategoryName",
             "in": "query",
             "schema": {
@@ -168,7 +175,7 @@
         }
       }
     },
-    "/api/v1/revoke-ticket/{bookedTicketId}/{ticketCode}/{qty}": {
+    "/api/v1/revoke-ticket/{bookedTicketId}/{ticketCode}": {
       "delete": {
         "tags": [
           "Tickets"
@@ -189,21 +196,28 @@
             "schema": {
               "type": "string"
             }
-          },
-          {
-            "name": "qty",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "pattern": "^-?(?:0|[1-9]\\d*)$",
-              "type": [
-                "integer",
-                "string"
-              ],
-              "format": "int32"
-            }
           }
         ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RevokeTicketRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RevokeTicketRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/RevokeTicketRequest"
+              }
+            }
+          },
+          "required": true
+        },
         "responses": {
           "200": {
             "description": "OK"
@@ -303,6 +317,19 @@
           "ticketCode": {
             "type": "string"
           },
+          "quantity": {
+            "pattern": "^-?(?:0|[1-9]\\d*)$",
+            "type": [
+              "integer",
+              "string"
+            ],
+            "format": "int32"
+          }
+        }
+      },
+      "RevokeTicketRequest": {
+        "type": "object",
+        "properties": {
           "quantity": {
             "pattern": "^-?(?:0|[1-9]\\d*)$",
             "type": [

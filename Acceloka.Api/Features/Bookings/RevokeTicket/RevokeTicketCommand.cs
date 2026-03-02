@@ -9,6 +9,11 @@ public class RevokeTicketCommand : IRequest<RevokeTicketResponse>
     public int Quantity { get; set; }
 }
 
+public class RevokeTicketRequest
+{
+    public int Quantity { get; set; }
+}
+
 public class RevokeTicketResponse
 {
     public string TicketCode { get; set; } = string.Empty;

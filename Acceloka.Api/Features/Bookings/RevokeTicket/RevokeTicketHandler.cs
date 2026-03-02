@@ -35,7 +35,7 @@ public class RevokeTicketHandler : IRequestHandler<RevokeTicketCommand, RevokeTi
         }
 
         // Update Quota?
-        //ticketInfo.Quota += request.Quantity;
+        ticketInfo.Quota += request.Quantity;
         await _dbContext.SaveChangesAsync(cancellationToken);
 
         return new RevokeTicketResponse

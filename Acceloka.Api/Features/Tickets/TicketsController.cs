@@ -1,6 +1,7 @@
 ﻿using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using Acceloka.Api.Features.Tickets.GetAvailableTickets;
+using Acceloka.Api.Features.Bookings.RevokeTicket;
 
 namespace Acceloka.Api.Features.Tickets;
 
@@ -48,14 +49,14 @@ public class TicketsController : ControllerBase
         }
     }
 
-    [HttpDelete("revoke-ticket/{bookedTicketId}/{ticketCode}/{qty}")]
-    public async Task<IActionResult> RevokeTicket([FromRoute] string bookedTicketId, [FromRoute] string ticketCode, [FromRoute] int qty)
+    [HttpDelete("revoke-ticket/{bookedTicketId}/{ticketCode}")]
+    public async Task<IActionResult> RevokeTicket([FromRoute] string bookedTicketId, [FromRoute] string ticketCode, [FromBody] RevokeTicketRequest request)
     {
         var command = new Acceloka.Api.Features.Bookings.RevokeTicket.RevokeTicketCommand
         {
             BookedTicketId = bookedTicketId,
             TicketCode = ticketCode,
-            Quantity = qty
+            Quantity = request.Quantity
         };
         var result = await _mediator.Send(command);
         return Ok(result);

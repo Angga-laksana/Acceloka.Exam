@@ -14,6 +14,7 @@ public class BookTicketItem
 
 public class BookTicketResponse
 {
+    public string BookingId { get; set; } = string.Empty;
     public decimal PriceSummary { get; set; }
     public List<CategorySummary> TicketPerCategories { get; set; } = new();
 }

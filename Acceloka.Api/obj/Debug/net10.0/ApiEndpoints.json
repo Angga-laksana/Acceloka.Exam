@@ -45,6 +45,11 @@
     "Order": 0,
     "Parameters": [
       {
+        "Name": "Search",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
         "Name": "CategoryName",
         "Type": "System.String",
         "IsRequired": false
@@ -116,7 +121,7 @@
   {
     "ContainingType": "Acceloka.Api.Features.Tickets.TicketsController",
     "Method": "RevokeTicket",
-    "RelativePath": "api/v1/revoke-ticket/{bookedTicketId}/{ticketCode}/{qty}",
+    "RelativePath": "api/v1/revoke-ticket/{bookedTicketId}/{ticketCode}",
     "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,
@@ -132,8 +137,8 @@
         "IsRequired": true
       },
       {
-        "Name": "qty",
-        "Type": "System.Int32",
+        "Name": "request",
+        "Type": "Acceloka.Api.Features.Bookings.RevokeTicket.RevokeTicketRequest",
         "IsRequired": true
       }
     ],

@@ -19,9 +19,15 @@ public class GetAvailableTicketsHandler : IRequestHandler<GetAvailableTicketsQue
         var query = _DbContext.Tickets.AsQueryable();
         
         // Apply filters
+        if (!string.IsNullOrWhiteSpace(request.Search))
+        {
+            string searchTerm = request.Search.ToLower().Trim();
+            query = query.Where(t => t.TicketName.ToLower().Contains(searchTerm) || t.TicketCode.ToLower().Contains(searchTerm));
+        }
         if (!string.IsNullOrEmpty(request.CategoryName))
         {
-            query = query.Where(t => t.CategoryName == request.CategoryName);
+            string category = request.CategoryName.ToLower().Trim();
+            query = query.Where(t => t.CategoryName.ToLower().Contains(category));
         }
         if (!string.IsNullOrEmpty(request.TicketCode))
         {
@@ -29,7 +35,7 @@ public class GetAvailableTicketsHandler : IRequestHandler<GetAvailableTicketsQue
         }
         if (!string.IsNullOrEmpty(request.TicketName))
         {
-            query = query.Where(t => t.TicketName.Contains(request.TicketName));
+            query = query.Where(t => t.TicketName.ToLower().Contains(request.TicketName));
         }
         if (request.MaxPrice.HasValue)
         {

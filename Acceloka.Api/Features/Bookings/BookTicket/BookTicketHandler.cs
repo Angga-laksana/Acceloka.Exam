@@ -42,6 +42,7 @@ public class BookTicketHandler : IRequestHandler<BookTicketCommand, BookTicketRe
 
         var response = new BookTicketResponse
         {
+            BookingId = bookingId,
             PriceSummary = request.Tickets.Sum(i =>
             {
                 var t = bookedDetails.First(d => d.TicketCode == i.TicketCode);
